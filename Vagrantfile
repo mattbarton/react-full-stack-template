@@ -6,10 +6,10 @@
 
 # script to be run as 'vagrant' user, not root, usig `privileged: false`
 $script = <<SCRIPT
-git config --global credential.helper cache
-git config --global user.email bartonmr@gmail.com
 cd ~/.dotfiles
 git pull
+git config --global credential.helper cache
+git config --global user.email bartonmr@gmail.com
 echo Shared folders suck on Windows, so just do everything in the VM using a repo in the VM home directory
 mkdir ~/repos
 #git clone https://github.com/mattbarton/react-full-stack-template.git ~/repos/react-full-stack-template
